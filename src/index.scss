@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+$numeros:'Passion One', sans-serif;
+$textos: 'Ubuntu', sans-serif;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    width: 100%;
+}
+
+body{
+    background-image: url('../public/img/dia.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    height: 100vh;
+    background-position: center;
+
+    .lugar{
+        margin-top: 10em;
+        color: whitew;
+        
+        .cidade{
+            margin-top: 2em;
+            font-family: $textos;
+            font-size: 2em;
+        }
+
+        .temperatura{
+            margin-top: 1em;
+            font-family: $numeros;
+            font-size: 4em;
+        }
+
+    }
+}
