@@ -10,6 +10,9 @@ const Local = () => {
 
   const [weather, setWeather] = useState(false);
 
+  const today = new Date();
+  const hour = today.getHours();
+
   let getWeather = async (lat, long) => {
     let res = await axios.get(
       `https://api.openweathermap.org/data/2.5/weather`,
@@ -34,7 +37,18 @@ const Local = () => {
     });
   }, []);
 
-  if (location == false) {
+  useEffect(() => {
+    if (hour >= 6 && hour < 16) {
+      document.body.style.backgroundImage = "url('../img/dia.png')";
+      document.body.style.color = "black";
+    } else if (hour >= 16 && hour < 18) {
+      document.body.style.backgroundImage = "url('../img/por-do-sol.png')";
+    } else {
+      document.body.style.backgroundImage = "url('../img/noite.png')";
+      document.body.style.color = "white";
+    }
+  }, [hour]);
+  if (location === false) {
     return (
       <div className="lugar text-center">
         <h1 className="cidade">
@@ -42,6 +56,10 @@ const Local = () => {
         </h1>
       </div>
     );
+  } else if (weather === false) {
+    <div className="lugar text-center">
+      <h1 className="cidade">Carregando clima...</h1>
+    </div>;
   } else {
     return (
       <div className="lugar text-center">

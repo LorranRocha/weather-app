@@ -17,9 +17,32 @@ body {
   background-position: center;
 }
 
+body p {
+  font-family: "Ubuntu", sans-serif;
+  position: relative;
+  font-size: 1.5rem;
+  color: #fff;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-bottom: -1em;
+}
+
+body p a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+body p a:hover {
+  -webkit-transition: ease .6s;
+  transition: ease .6s;
+  color: brown;
+}
+
 body .lugar {
   margin-top: 10em;
-  color: whitew;
+  color: white;
 }
 
 body .lugar .cidade {

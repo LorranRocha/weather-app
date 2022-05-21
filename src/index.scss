@@ -4,10 +4,12 @@
 $numeros:'Passion One', sans-serif;
 $textos: 'Ubuntu', sans-serif;
 
+
 *{
     margin: 0;
     padding: 0;
 }
+
 html{
     width: 100%;
 }
@@ -20,19 +22,45 @@ body{
     height: 100vh;
     background-position: center;
 
+    p{
+        font-family: $textos;
+        position: relative;
+        font-size: 1.5rem;
+        color: #fff;
+
+        padding-top: 1em;
+        padding-left: 1em;
+        padding-bottom: -1em;
+
+        a{
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 800;
+            
+        }
+
+        a:hover{
+            transition: ease .6s;
+            color: brown;
+        }
+    }
+
     .lugar{
         margin-top: 10em;
-        color: whitew;
+        color: white;
         
         .cidade{
             margin-top: 2em;
             font-family: $textos;
+            
             font-size: 2em;
         }
 
         .temperatura{
             margin-top: 1em;
             font-family: $numeros;
+            
             font-size: 4em;
         }
 
